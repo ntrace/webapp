@@ -1,0 +1,26 @@
+{
+  "name": "ntrace-webapp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "nTrace Web App",
+  "main": "index.js",
+  "author": "pgte",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "hapi": "~1.9.4",
+    "wsstream": "~0.1.6",
+    "reconnect": "~1.5.2",
+    "duplex-emitter": "~2.1.2",
+    "moment": "~2.1.0",
+    "ansi-to-html": "~0.1.1",
+    "stackvis": "~0.1.1",
+    "split": "~0.2.10",
+    "stream-combiner": "0.0.2"
+  },
+  "devDependencies": {
+    "browserify": "~2.28.0",
+    "watch-js": "0.0.6"
+  }
+}

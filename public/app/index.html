@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+
+    <title>nTrace</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee|Michroma|Montez|Arimo:400,700|Paytone+One|Sofia|Allura|Patrick+Hand+SC|Grand+Hotel|Tangerine|Great+Vibes|Rancho|Leckerli+One|Damion|Cookie|Rochester|Sacramento|Montserrat+Subrayada:400,700|Pathway+Gothic+One|Aclonica|Francois+One|Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for nTrace -->
+    <link href="/css/ntrace.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-app="nTrace">
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/login">Log in</a></li>
+        </ul>
+        <h3 class="text-muted brand">nTrace</h3>
+      </div>
+
+      <div class="container" ng-view></div>
+
+      <div class="footer">
+        <p>&copy; Mutansource Unipessoal, Lda. 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/app-bundle.js"></script>
+
+  </body>
+</html>

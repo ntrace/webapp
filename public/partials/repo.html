@@ -1,0 +1,26 @@
+<h1>{{owner}}/{{repo}}</h1>
+
+<h2>Runs:</h2>
+
+<table id="repo" class="table table-striped" ng-cloak>
+
+  <thead ng-show="runs.length">
+    <tr>
+      <th>Started</th>
+      <th>Commit</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr ng-show="!runs.length">
+      <td>No runs yet</td>
+    </tr>
+
+    <tr ng-repeat="run in runs">
+      <td><a href="{{run.href}}">{{run.started}}</td>
+      <td><a href="{{run.href}}">{{run.commit}}</a></td>
+    </tr>
+  </tbody>
+
+</table>

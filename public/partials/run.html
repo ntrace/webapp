@@ -1,0 +1,60 @@
+<h1><a href="/repo/{{owner}}/{{repo}}">{{owner}}/{{repo}}</a></h1>
+
+<h3>Run {{run}}</h3>
+
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+    <li><a href="#out" data-toggle="tab">Output</a></li>
+    <li><a href="#result" data-toggle="tab">Result</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="events">
+      <table class="table table-striped" ng-cloak>
+
+        <thead ng-show="streams.events.length">
+          <tr>
+            <th>Level</th>
+            <th>Message</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr ng-show="!streams.events.length">
+            <td colspan="2">No events yet</td>
+          </tr>
+
+          <tr ng-repeat="event in streams.events">
+            <td><span class="label label-{{event.label}}">{{event.level}}</span></td>
+            <td>{{event.message}}</td>
+            <td>{{event.when}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="tab-pane" id="out">
+      <p ng-show="!streams.out.length">No output yet</p>
+
+      <div class="code" ng-show="streams.out.length">
+        <span ng-repeat="out in streams.out" ng-bind-html-unsafe="out"></span>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="result">
+      <p ng-show="!flamegraph">No output yet</p>
+
+      <div style="overflow: scroll, height: 8000" ng-show="flamegraph">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="8000" ng-bind-html-unsafe="flamegraph">
+        </svg>
+      </div>
+
+    </div>
+
+    <div class="tab-pane" id="stderr">Stderr</div>
+  </div>
+</div>

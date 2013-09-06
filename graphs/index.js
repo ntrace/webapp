@@ -1,0 +1,1 @@
+exports.flamegraph = require('./flamegraph');

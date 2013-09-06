@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIRNAME=`dirname "$0"`
+cd ${DIRNAME}/..
+
+./node_modules/.bin/browserify --debug \
+   public/js/app.js \
+   public/js/websocket.js \
+   public/js/controllers/repo.js \
+   public/js/controllers/run.js \
+   -o public/js/app-bundle.js
