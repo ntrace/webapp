@@ -77,10 +77,8 @@ function RunCtrl($scope, $routeParams, $http, WebSocket) {
 
     function buildGraphs() {
       var url = '/repo/' + repo + '/runs/' + run + '/graphs/flamegraph';
-      //$scope.flamegraph = url;
       $http.get(url).
         success(function(data) {
-          console.log('data is here');
           $scope.flamegraph = data;
         }).
         error(function(data) {
