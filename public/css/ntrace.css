@@ -1,3 +1,6 @@
+body {
+  padding-top: 50px;
+}
 .brand {
   font-family: 'Montserrat Subrayada', sans-serif;
 }
@@ -9,10 +12,4 @@
   overflow: scroll;
   border-radius: 4px;
   margin-top: 1em;
-}
-
-#function-info {
-	border: 1px solid black;
-	height: 3em;
-	width: 100%;
 }

@@ -48,9 +48,7 @@
     <div class="tab-pane" id="result">
       <p ng-show="!flamegraph">No output yet</p>
 
-      <div style="overflow: scroll, height: 8000" ng-show="flamegraph">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="8000" ng-bind-html-unsafe="flamegraph">
-        </svg>
+      <div style="overflow: scroll, height: 8000" ng-show="flamegraph" ng-bind-html-unsafe="flamegraph">
       </div>
 
     </div>

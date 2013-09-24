@@ -12,9 +12,6 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
-
     <!--
     <link href='http://fonts.googleapis.com/css?family=ABeeZee|Michroma|Montez|Arimo:400,700|Paytone+One|Sofia|Allura|Patrick+Hand+SC|Grand+Hotel|Tangerine|Great+Vibes|Rancho|Leckerli+One|Damion|Cookie|Rochester|Sacramento|Montserrat+Subrayada:400,700|Pathway+Gothic+One|Aclonica|Francois+One|Nunito:400,700,300' rel='stylesheet' type='text/css'>
   -->
@@ -32,25 +29,31 @@
 
   <body ng-app="nTrace">
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="/login">Log in</a></li>
-        </ul>
-        <h3 class="text-muted brand">nTrace</h3>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand brand" href="#">nTrace</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
+    </div>
 
-      <div class="container" ng-view></div>
+    <div class="container" ng-view></div>
 
-      <div class="footer">
-        <p>&copy; Mutansource Unipessoal, Lda. 2013</p>
-      </div>
-
-    </div> <!-- /container -->
-
+    <div class="footer">
+      <p>&copy; Mutansource Unipessoal, Lda. 2013</p>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
