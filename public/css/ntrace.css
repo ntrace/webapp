@@ -13,3 +13,16 @@ body {
   border-radius: 4px;
   margin-top: 1em;
 }
+
+.main {
+	width: 100%;
+	margin: 0;
+	padding: 1em;
+}
+
+.footer {
+	margin: 0;
+	padding: 1em;
+	color: lightgrey;
+	font-size: 75%;
+}

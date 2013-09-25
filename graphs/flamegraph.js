@@ -16,7 +16,9 @@ function flamegraph(req) {
   var stackvis = spawn(flamegraphExec);
   stackvis.on('error', onError);
 
-  var central = duplexEmitter(net.connect(centralPort));
+  var cli = net.connect(centralPort);
+  cli.on('error', onError);
+  var central = duplexEmitter(cli);
   central.on('error', onError);
   central.emit('stream result', req.params.owner, req.params.repo, req.params.run);
   central.on('data', function(d) {
@@ -31,7 +33,7 @@ function flamegraph(req) {
   function onError() {
     try {
       stackvis.kill();
-      central.end();
+      cli.end();
     } catch(err) { console.error(err); }
   }
 };
