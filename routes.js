@@ -2,7 +2,7 @@ var path   = require('path');
 var server = require('./server');
 var graphs = require('./graphs');
 
-ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
+var ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
 
 /// /:owner/:repo/graphs/flamegraph
 
