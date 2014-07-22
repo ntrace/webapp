@@ -5,7 +5,7 @@ var ansi        = require('ansi-to-html');
 var convertAnsi = new ansi();
 
 function RunCtrl($scope, $routeParams, $http, WebSocket) {
-  WebSocket($scope, 'ws://localhost:8081', onConnected);
+  WebSocket($scope, 'ws://' + window.location.hostname  + ':8081', onConnected);
 
   var repo      = $routeParams.owner + '/' + $routeParams.repo;
   var run       = $routeParams.run;

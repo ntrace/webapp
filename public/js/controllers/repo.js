@@ -3,7 +3,7 @@ global.RepoCtrl = RepoCtrl;
 var moment = require('moment');
 
 function RepoCtrl($scope, $routeParams, WebSocket) {
-  WebSocket($scope, 'ws://localhost:8081', onConnected);
+  WebSocket($scope, 'ws://' + window.location.hostname + ':8081', onConnected);
 
   var repo     = $routeParams.owner + '/' + $routeParams.repo;
   $scope.owner = $routeParams.owner;
